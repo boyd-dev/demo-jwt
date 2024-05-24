@@ -6,8 +6,6 @@ Access to XMLHttpRequest at 'http://localhost:8080/demo-mvc/guest/test' from ori
 ```
 Postman과 같은 API 호출 테스트 도구에서는 CORS 문제가 나타나지 않습니다. 왜냐하면 Postman은 기본적으로 브라우저가 아니기 때문입니다.
 
-아무튼 이 문제를 어떻게 해결할 수 있는지 살펴보겠습니다.
-
 ## 백엔드 서버 설정
 먼저 구글의 OAuth 2.0 인증 서비스를 이용하기 위한 설정을 합니다. 스프링 시큐리티의 `oauth2Login`을 사용하면 수월하게 구현할 수 있습니다. 스프링 MVC 기본 구성에 스프링 시큐리티를 적용하는 경우 구성 클래스에 아래와 같은 `SecurityFilterChain` 설정을 합니다.
 
