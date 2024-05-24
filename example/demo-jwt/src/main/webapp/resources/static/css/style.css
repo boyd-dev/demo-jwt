@@ -1,0 +1,50 @@
+input[type=button] {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-width: 1px;
+  font-family: Consolas, Courier;
+  font-weight: bold;
+  font-size: large;
+}
+input[type=text] {
+  margin: 5px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: medium;
+  padding: 3px;
+  width:80%;
+}
+
+input[type=file]::file-selector-button {
+  background-color: #346eeb;
+  color: #ffff;
+  padding: 10px 15px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-width: 1px;
+  font-family: Consolas, Courier;
+  font-weight: bold;
+  font-size: medium;
+  transition: .5s;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 1px;
+}
+.content .subject {
+  width: 40px;
+  border-style: none;
+  padding-bottom: inherit;
+}
+.content .title {
+  flex-grow: 1;
+  border-style: none;
+  padding-bottom: inherit;
+}

@@ -1,0 +1,15 @@
+.nav-link {
+    background-color: #434dda;
+    color: white; /* White text color */
+    padding: 10px 20px; /* Some padding */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between the logo and navigation */
+}
+.sidebar a:hover {
+    color: #ddd;
+}
+
+.sidebar a:visited {
+    color: #ddd;
+}
