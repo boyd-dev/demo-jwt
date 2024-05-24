@@ -8,7 +8,7 @@ JWT 유효시간은 `jwt.expiry.time=900` 으로 15분으로 되어 있음
 
 ## 프론트엔드 서버
 - myapp  
-`env.development`에 백엔드 서버 URL을 추가해야 함
+`env.development`에 백엔드 서버 URL을 추가해야 함  
 `yarn install`  
 `yarn start`  
 사용된 `yarn` 버전은 1.22.19

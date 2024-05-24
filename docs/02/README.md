@@ -39,11 +39,11 @@ JWT의 claim에 넣을 수 있는 항목은 표준으로 권장되는 것도 있
 
 ```
 JwtClaimsSet claims = JwtClaimsSet.builder()
-						.issuer(this.issuer)
-						.issuedAt(now)
-						.expiresAt(now.plusSeconds(this.expiryTime))
-						.claim("userId", authentication.getName())
-						.build();
+				.issuer(this.issuer)
+				.issuedAt(now)
+				.expiresAt(now.plusSeconds(this.expiryTime))
+				.claim("userId", authentication.getName())
+				.build();
 ```
 
 이렇게 만든 JWT를 쿠키에 넣어 리턴합니다. 이때 쿠키는 `HttpOnly` 쿠키로 만들어서 스크립트가 접근할 수 없도록 합니다. 쿠키 유효시간은 정하기 나름입니다. 그리고 리액트에게 정해진 redirection 페이지로 라우트하도록 합니다. `react-router-dom`을 사용하므로 리디렉션은 브라우저 내에서 이루어질 것입니다. 
@@ -65,7 +65,7 @@ if (cookies.size() == 1) {
     ...
 }
 ```
-이렇게 디코딩된 정보를 바탕으로 인증 정보를 `SecurityContextHolder`에 넣습니다. 그렇게 해야 나머지 시큐리티 필터체인을 무사히 통과할 수 있습니다.
+이렇게 디코딩된 정보를 바탕으로 인증 정보를 `SecurityContextHolder`에 넣습니다. 그렇게 해야 나머지 시큐리티 필터체인을 무사히 통과할 수 있습니다. 인증 정보가 없다면 시큐리티 필터는 그 전처럼 "Access Denied"로 차단할 것입니다.
 
 ```
 SecurityContextHolder.getContext().setAuthentication(authentication);

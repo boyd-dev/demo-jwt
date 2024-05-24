@@ -90,7 +90,7 @@ private CorsConfigurationSource corsConfigurationSource() {
 
 >The most interesting capability exposed by both fetch() or XMLHttpRequest and CORS is the ability to make "credentialed" requests that are aware of HTTP cookies and HTTP Authentication information. By default, in cross-origin fetch() or XMLHttpRequest calls, browsers will not send credentials.
 
-설명처럼 "credentials"은 쿠키가 될 수 있는데, 바로 이 예제에서는 백엔드 서버가 인증된 사용자에게 JWT를 발급하여 쿠키로 주게 되고 이후 요청부터는 JWT를 포함시켜서 보내서 인증되어 있음을 증명해야 되므로 이러한 설정이 필요합니다. 그렇다면, 예를 들어 `axios`에서 `XMLHttpRequest`를 보낼 때 다른 도메인 즉 백엔드 서버(localhost:8080)가 심은 쿠키를 보내는 방법이 존재해야 합니다(리액트 애플리케이션은 localhost:3000에서 제공되므로 일반적으로는 localhost:8080이 심은 쿠키를 이용할 수 없습니다). 당연하게도 `XMLHttpRequest.withCredentials`이라는 옵션이 제공됩니다. MDN에 다음과 같이 잘 [설명](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials)되어 있습니다. 
+설명처럼 "credentials"은 쿠키가 될 수 있는데, 바로 이 예제에서는 백엔드 서버가 인증된 사용자에게 JWT를 발급하여 쿠키로 주게 되고 이후 요청부터는 JWT를 포함시켜 인증되어 있음을 증명해야 되므로 이러한 설정이 필요합니다. 그렇다면, 예를 들어 `axios`에서 `XMLHttpRequest`를 보낼 때 다른 도메인 즉 백엔드 서버(localhost:8080)가 심은 쿠키를 보내는 방법이 존재해야 합니다(리액트 애플리케이션은 localhost:3000에서 제공되므로 일반적으로는 localhost:8080이 심은 쿠키를 이용할 수 없습니다). 당연하게도 `XMLHttpRequest.withCredentials`이라는 옵션이 제공됩니다. MDN에 다음과 같이 잘 [설명](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials)되어 있습니다. 
 
 >The XMLHttpRequest.withCredentials property is a boolean value that indicates whether or not cross-site Access-Control requests should be made using credentials such as cookies, authentication headers or...
 
