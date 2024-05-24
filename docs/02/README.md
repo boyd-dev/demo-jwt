@@ -33,7 +33,7 @@ public JwtEncoder jwtEncoder() {
 	return new NimbusJwtEncoder(jwks);
 }
 ```
-이렇게 설정한 빈은 `JwtIssuerHandler`에 주입하여 JWT 토큰을 생성하는데 사용됩니다.
+설정한 빈들은 `JwtIssuerHandler`에 주입하여 JWT 토큰을 생성하는데 사용됩니다.
 
 JWT의 claim에 넣을 수 있는 항목은 표준으로 권장되는 것도 있지만 임의로 추가할 수 있으므로 애플리케이션에서 필요한 정보를 넣습니다. 여기서는 구글에서 받은 사용자 정보 중 email을 `userId`라는 이름으로 넣도록 하겠습니다. 
 
