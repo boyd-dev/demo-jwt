@@ -30,6 +30,6 @@ CORS(Cross-Origin Resource Sharing)는 사용자가 원래 받은 리소스의 �
 
 목차
 
-1. [백앤드 설정](01/README.md)
+1. [백엔드 설정](01/README.md)
 2. [JWT 발급과 확인](02/README.md)
 3. [프론트엔드](03/README.md)
