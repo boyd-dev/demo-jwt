@@ -106,7 +106,7 @@ const response = await axios.post(`${process.env.REACT_APP_SERVER_URI}/api/test`
 
 다시 말해서 와일드카드 설정을 하면 브라우저는 이런 응답 역시 차단한다는 말이 되겠습니다. 그래서 위와 같이 `setAllowedOrigins`, `setAllowedMethods`, `setAllowedHeaders` 등을 목적에 맞게 설정해 주었습니다. 
 
-이렇게 시큐리티 설정을 통해 프론트엔드와 백엔드가 분리되어도 CORS 문제 없이 요청과 응답을 주고받을 수 있습니다. 또 요청 패턴에 따라 credential을 포함할 수도, 또는 모두 허용할 수도 있겠습니다.
+이렇게 시큐리티 설정을 통해 프론트엔드와 백엔드가 분리되어도 CORS 문제 없이 요청과 응답을 주고받을 수 있습니다. 또 요청 패턴에 따라 credential이 필요할 수도, 또는 모두 허용할 수도 있겠습니다.
 
 다음은 OAuth2 인증 설정으로 시큐리티의 `oauth2Login` 기능을 이용합니다. 최소한의 설정으로 구글 로그인 서비스와 연결할 수 있습니다. 스프링 프레임워크에서 시큐리티를 그대로 사용했으므로 다소 복잡한 설정이 들어간 것처럼 보이지만 기본적으로는 스프링 부트와 동일합니다. `oauth2Login`의 설정 부분은 [여기](https://github.com/boyd-dev/demo-security/blob/main/docs/05/README.md)를 참조하세요.
 
