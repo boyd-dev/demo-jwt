@@ -70,7 +70,7 @@ public class WebConfig implements WebMvcConfigurer {
 	}
 }
 ```
-이것은 `/guest/**` 패턴의 요청은 모두 CORS를 허용하겠다는 의미가 되겠습니다. 하지만 프론트엔드와 백엔드를 분리하는 상황이 다소 복잡하기 때문에 이것으로 충분하지 않습니다. 요청 패턴이 `/api/**`일 때는 인증한 사용자만이 가능하도록 할 생각이므로 이 역시 CORS를 허용해야 합니다. 그래서 <b>일단</b> `CorsConfigurationSource`를 다음과 같이 설정해주기로 합니다. 
+이것은 `/guest/**` 패턴의 요청은 모두 CORS를 허용하겠다는 의미가 되겠습니다. 하지만 이것으로 충분하지 않습니다. 요청 패턴이 `/api/**`일 때는 인증한 사용자만이 가능하도록 할 생각이므로 이 역시 CORS를 허용해야 합니다. 그래서 <b>일단</b> `CorsConfigurationSource`를 다음과 같이 설정해주기로 합니다. 
 
 ```
 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
